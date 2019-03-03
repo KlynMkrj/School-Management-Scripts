@@ -1,0 +1,53 @@
+
+CREATE TABLE Students
+(
+  [Roll_no] INT NOT NULL,
+  [Standard] INT NOT NULL,
+  [Student_Name] VARCHAR(20),
+  [Contact_no] VARCHAR(10),
+  CONSTRAINT PK_Students PRIMARY KEY ([Roll_no], [Standard])
+);
+
+insert into [Student].[dbo].[Students] values (1, 6, 'KM', 9830244809);
+insert into [Student].[dbo].[Students] values (2, 6, 'AB', 9830244801);
+
+insert into [Student].[dbo].[Students] values (1, 8, 'CD', 9830244802);
+insert into [Student].[dbo].[Students] values (2, 8, 'XY', 9830244803);
+
+--select * from Students;
+
+--------------------------------------------------------------------------
+
+
+CREATE TABLE Courses
+(
+  [Course_Id] INT NOT NULL IDENTITY(1,1),  
+  [Course_Name] VARCHAR(20),
+  CONSTRAINT PK_Course PRIMARY KEY ([Course_Id])
+);
+
+insert into [Student].[dbo].[Courses] values ('Math');
+insert into [Student].[dbo].[Courses] values ('Science');
+insert into [Student].[dbo].[Courses] values ('English');
+
+--select * from Courses;
+
+--------------------------------------------------------------------------
+
+
+CREATE TABLE Classrooms
+(
+  [Room_no] INT NOT NULL IDENTITY(1,1),  
+  [Floor] VARCHAR(20),
+  [Strength] INT,
+  CONSTRAINT PK_Classrooms PRIMARY KEY ([Room_no])
+);
+
+
+insert into [Student].[dbo].[Classrooms] values ('First', 40);
+insert into [Student].[dbo].[Classrooms] values ('First', 40);
+
+insert into [Student].[dbo].[Classrooms] values ('Second', 30);
+insert into [Student].[dbo].[Classrooms] values ('Second', 30);
+
+--select * from Classrooms;
